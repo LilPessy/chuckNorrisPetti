@@ -3,6 +3,7 @@ import './styles/App.css'
 import Button from "./components/Button.jsx"
 import EditorialContent from './components/EditorialContent.jsx'
 import Dropdown from './components/Dropdown.jsx'
+import Canva from './components/Canva'
 
 function App() {
 
@@ -11,12 +12,14 @@ function App() {
   const [selectedCategory, setSelectedCategory] = useState("")
 
   function loadJoke(){
-   console.log("qui carico il joke")
-   setJoke("losasso puzza")
+    let url = selectedCategory !== "" ? `https://api.chucknorris.io/jokes/random?category=${selectedCategory}` : "https://api.chucknorris.io/jokes/random"
+    fetch(url)
+      .then((response) => response.json())
+      .then((data) => {setJoke(data.value)});
   }
 
   function copyJoke(){
-    console.log("joke copiato")
+    navigator.clipboard.writeText(joke)
   }
 
   function loadCategories(){
@@ -26,9 +29,11 @@ function App() {
 
   }
 
-  function setCategory(c){
+  /*function setCategory(c){
     setSelectedCategory(c)
-  }
+    console.log(selectedCategory)
+  }*/
+  
 
   useEffect(()=>
     loadCategories(), []
@@ -47,18 +52,27 @@ function App() {
 
       <Dropdown
         list = {categories}
-        clbk = {setCategory}
+        clbk = {setSelectedCategory}
       />
 
-      <Button 
-        clbk = {loadJoke}
-        variant = {joke == "" ? "disabled" : "enabled"}  
-        msg = "CARICA JOKE"
+      <Canva
+        joke = {joke}
       />
 
-      {joke !== "" &&
-        <div className='div'>{joke}</div>
-      }
+      <div className = "btnContainer flexCol">
+        <Button 
+          clbk = {loadJoke}
+          variant = "enabled"  
+          msg = "CARICA JOKE"
+        />
+
+        <Button 
+          clbk = {copyJoke}
+          variant = {joke == "" ? "disabled" : "enabled"}  
+          msg = "COPIA JOKE"
+        />
+      </div>
+      
     </div>
   )
 }
