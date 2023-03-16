@@ -1,32 +1,25 @@
-import "../styles/EditorialContent.css"
+import "../styles/Dropdown.css"
 
-function Dropdown({variant, list}){
-
-    
-
-    function loadCategories(){
-        /*
-            fetch delle categorie con la map dell'array di oggetti
-
-            ogni oggetto avrà i seguenti campi{values = "myValue",label = "cio che vdede l'utente"}
-        */
-    }
-
-    
-
+function Dropdown({variant, list, clbk}){
     function renderClasses(){
         let classes = ["dropdown", "flexCol"];
         return classes.join(" ")
       }
+    
+    function handleChange(e){
+        clbk(e.target.value)
+    }  
 
     return(
         <div className={renderClasses()}>
-            <select>
-                <option>Scegli una categoria</option>
-                {/*qui ci va la map*/}
+            <select onChange={(e)=>{handleChange(e)}}>
+                <option value = "">Scegli una categoria</option>
+                {list.map((item, index)=>{
+                   return(<option key={index} value={item} >{item.charAt(0).toUpperCase() + item.slice(1)}</option>)
+                })}
             </select>
         </div>  
     )
 }
 
-export default EditorialContent
+export default Dropdown

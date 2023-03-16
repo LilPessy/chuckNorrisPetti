@@ -2,11 +2,13 @@ import { useEffect, useState } from 'react'
 import './styles/App.css'
 import Button from "./components/Button.jsx"
 import EditorialContent from './components/EditorialContent.jsx'
+import Dropdown from './components/Dropdown.jsx'
 
 function App() {
 
   const [joke, setJoke] = useState("")
   const [categories, setCategories] = useState([])
+  const [selectedCategory, setSelectedCategory] = useState("")
 
   function loadJoke(){
    console.log("qui carico il joke")
@@ -18,15 +20,19 @@ function App() {
   }
 
   function loadCategories(){
-    console.log("il fetch delle categorie")
+    fetch("https://api.chucknorris.io/jokes/categories")
+    .then((response) => response.json())
+    .then((data) => {setCategories(data)});
+
   }
 
-  useEffect(()=>{
-    console.log("compnente montato")
-    if(categories.lenght === 0){
-      loadCategories()
-    }
-  },[])
+  function setCategory(c){
+    setSelectedCategory(c)
+  }
+
+  useEffect(()=>
+    loadCategories(), []
+  )
   
 
   return (
@@ -39,13 +45,16 @@ function App() {
 
       <img src="../public/img/logo.png" className="logo"/>
 
+      <Dropdown
+        list = {categories}
+        clbk = {setCategory}
+      />
+
       <Button 
         clbk = {loadJoke}
         variant = {joke == "" ? "disabled" : "enabled"}  
         msg = "CARICA JOKE"
       />
-
-      
 
       {joke !== "" &&
         <div className='div'>{joke}</div>
