@@ -7,9 +7,9 @@
   --btnColor: #D5DDBC;
   --pageFont: "IM FELL Great Primer SC";
   --jokeFont: "Inter";
-  --sizeLarge: 49px;
-  --sizeMedium: 25px;
-  --sizeSmall: 20px;
+  --sizeLarge: 3rem;
+  --sizeMedium: 1.5rem;
+  --sizeSmall: 1.2rem;
 
   font-family: var(--pageFont);
   line-height: 1.5;

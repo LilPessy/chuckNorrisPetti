@@ -13,6 +13,7 @@
     border-radius: 5px;
     color: var(--btnColor);
     text-align: center;
+    font-size: var(--sizeSmall);
 }
 
 .btn:active {
