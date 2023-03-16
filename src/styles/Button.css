@@ -1,7 +1,21 @@
 .enabled{
-    background-color: red;
+    background-color: var(--enabledBtn);
 }
 
 .disabled{
-    background-color: tomato;
+    background-color: var(--disabledBtn);
+}
+
+.btn{
+    margin-top: 14px;
+    width: 45%;
+    padding: 1.6% 0;
+    border-radius: 5px;
+    color: var(--btnColor);
+    text-align: center;
+}
+
+.btn:active {
+    background-color: #631615;
+    transition: 0.1s ease-in-out;
 }
