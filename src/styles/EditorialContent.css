@@ -1,14 +1,10 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 .editorialContent h1{
     font-size: var(--sizeLarge);
+    text-align: center;
 }
 
 .editorialContent h3{
     font-size: var(--sizeMedium);
+    text-align: center;
 }
 
