@@ -2,6 +2,7 @@
   --bg: #D5DDBC;
   --disabledBtn: #AA9190;
   --enabledBtn: #931F1D;
+  --dropdown: #937B63;
   --pageColor: #000000; 
   --btnColor: #D5DDBC;
   --pageFont: "IM FELL Great Primer SC";
@@ -15,6 +16,12 @@
   font-weight: 400;
   color: var(--color);
   background-color: var(--bg);
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 
@@ -44,4 +51,12 @@ body {
 
 .regular{
   font-weight: 400;
+}
+
+.pageFont{
+  font-family: var(--pageFont);
+}
+
+.jokeFont{
+  font-family: var(--jokeFont);
 }
