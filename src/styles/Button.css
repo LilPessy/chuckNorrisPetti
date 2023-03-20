@@ -16,7 +16,7 @@
     font-size: var(--sizeSmall);
 }
 
-.btn:active {
+.hoverBtn:active {
     background-color: #631615;
     transition: 0.1s ease-in-out;
 }

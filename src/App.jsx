@@ -19,7 +19,10 @@ function App() {
   }
 
   function copyJoke(){
-    navigator.clipboard.writeText(joke)
+    if(joke !== ""){
+      navigator.clipboard.writeText(joke)
+      alert("joke copiato")
+    }
   }
 
   function loadCategories(){

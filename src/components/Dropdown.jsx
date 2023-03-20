@@ -14,7 +14,7 @@ function Dropdown({list, clbk}){
     return(
         <div className={renderClasses()}>
             <select onChange={(e)=>{handleChange(e)}}>
-                <option>Scegli una categoria</option>
+                <option value = "">Scegli una categoria</option>
                 {list.map((item, index)=>{
                    return(<option key={index} value={item} >{item.charAt(0).toUpperCase() + item.slice(1)}</option>)
                 })}

@@ -60,3 +60,7 @@ body {
 .jokeFont{
   font-family: var(--jokeFont);
 }
+
+.d-none{
+  display: none;
+}

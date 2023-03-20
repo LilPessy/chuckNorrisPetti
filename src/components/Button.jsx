@@ -4,7 +4,7 @@ import '../styles/Button.css'
 function Button({clbk, variant, msg}) {
 
   function renderClasses(){
-    let classes = ["btn", "d-flex", "bgRed", variant];
+    let classes = ["btn", "d-flex", "bgRed", variant, variant === "enabled" && "hoverBtn" ];
     return classes.join(" ")
   }
 

@@ -3,7 +3,7 @@ import { useEffect } from "react";
 
 function Canva({joke}){
     function renderClasses(){
-        let classes = ["canva", "jokeFont"];
+        let classes = ["canva", "jokeFont", joke == "" && "d-none"];
         return classes.join(" ")
     } 
 
