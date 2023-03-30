@@ -1,0 +1,79 @@
+:root {
+  --bg: #D5DDBC;
+  --disabledBtn: #AA9190;
+  --enabledBtn: #931F1D;
+  --dropdown: #937B63;
+  --pageColor: #000000; 
+  --btnColor: #D5DDBC;
+  --pageFont: "IM FELL Great Primer SC";
+  --jokeFont: "Inter";
+  --sizeLarge: 3rem;
+  --sizeMedium: 1.5rem;
+  --sizeSmall: 1.2rem;
+
+  font-family: var(--pageFont);
+  line-height: 1.5;
+  font-weight: 400;
+  color: var(--color);
+  background-color: var(--bg);
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+@font-face {
+  font-family: "IM FELL Great Primer SC";
+  src: url(../assets/fonts/pageFont.ttf);
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url(../assets/fonts/jokeFont.ttf);
+}
+
+.flexCol{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.regular{
+  font-weight: 400;
+}
+
+.pageFont{
+  font-family: var(--pageFont);
+}
+
+.jokeFont{
+  font-family: var(--jokeFont);
+}
+
+.d-none{
+  display: none;
+}
+
+@media (max-width:768px) {
+  :root{
+    --sizeMedium: 1.2rem;
+    --sizeSmall: 1.1rem;
+  }
+
+  img{
+    display: none;
+  }
+
+ 
+}

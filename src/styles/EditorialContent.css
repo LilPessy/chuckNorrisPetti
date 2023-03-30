@@ -1,0 +1,10 @@
+.editorialContent h1{
+    font-size: var(--sizeLarge);
+    text-align: center;
+}
+
+.editorialContent h3{
+    font-size: var(--sizeMedium);
+    text-align: center;
+}
+

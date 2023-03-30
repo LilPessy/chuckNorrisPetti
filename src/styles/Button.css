@@ -1,0 +1,28 @@
+.enabled{
+    background-color: var(--enabledBtn);
+}
+
+.disabled{
+    background-color: var(--disabledBtn);
+}
+
+.btn{
+    margin-top: 14px;
+    width: 100%;
+    padding: 3.2% 0;
+    border-radius: 5px;
+    color: var(--btnColor);
+    text-align: center;
+    font-size: var(--sizeSmall);
+}
+
+.hoverBtn:active {
+    background-color: #631615;
+    transition: 0.1s ease-in-out;
+}
+
+@media (max-width: 768px) {
+    .btn{
+        padding: 6.4% 0;
+    }
+}
