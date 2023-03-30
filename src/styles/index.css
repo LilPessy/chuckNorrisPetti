@@ -64,3 +64,16 @@ body {
 .d-none{
   display: none;
 }
+
+@media (max-width:768px) {
+  :root{
+    --sizeMedium: 1.2rem;
+    --sizeSmall: 1.1rem;
+  }
+
+  img{
+    display: none;
+  }
+
+
+}

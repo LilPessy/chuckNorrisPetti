@@ -5,3 +5,10 @@
     border: 2px solid black;
     font-size: var(--sizeSmall);
 }
+
+@media (max-width:768px) {
+    .canva{
+        width: 90%;
+
+    }
+}

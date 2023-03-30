@@ -32,10 +32,9 @@ function App() {
 
   }
 
-  /*function setCategory(c){
+  function setCategory(c){
     setSelectedCategory(c)
-    console.log(selectedCategory)
-  }*/
+  }
   
 
   useEffect(()=>
@@ -48,14 +47,14 @@ function App() {
 
       <EditorialContent
         title="Webapp API Chuck Norris"
-        subtitle = "Design di una pagina che utilizza la API di chucknorris.io per generare alla pressione di un pulsante una battuta del tipo che selezioni nel menu a tendina qui sotto.otitolo"
+        subtitle = "Design di una pagina che utilizza la API di chucknorris.io per generare alla pressione di un pulsante una battuta del tipo che selezioni nel menu a tendina qui sotto"
       />
 
-      <img src="../public/img/logo.png" className="logo"/>
+      <img src="../img/logo.png" className="logo"/>
 
       <Dropdown
         list = {categories}
-        clbk = {setSelectedCategory}
+        clbk = {setCategory}
       />
 
       <Canva

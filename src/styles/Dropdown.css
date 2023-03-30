@@ -10,7 +10,7 @@
     font-size: var(--sizeMedium);
     text-align: center;
     appearance: none;
-    background-image: url("./../public/img/arrow.png");
+    background-image: url("./../img/arrow.png");
     background-repeat: no-repeat;
     background-position: right 0.7rem top 50%;
     background-size: 1.85rem auto;
